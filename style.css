@@ -1,0 +1,173 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #040D12;
+    font-family: 'poppins',sans-serif;
+    color: #333;
+}
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    gap: 1rem;
+ 
+}
+
+ .Active_Animation{
+    animation-name: shack;
+    animation-duration: 342ms;
+    animation-iteration-count: infinite;
+ }
+
+@keyframes shack {
+    50%{
+        transform: translateX(20px);
+    }
+    50%{
+        transform: translateX(-20px);
+    }
+}
+@keyframes shack {
+    50%{
+        transform: translateX(5px);
+    }
+    50%{
+        transform: translateX(-4px);
+    }
+}
+
+
+
+
+form .textInput{
+    display: grid;
+    grid-template-columns: repeat(2,200px);
+    gap: 10px;
+    flex-wrap: wrap;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    width: 50%;
+    gap: 1rem;
+    background-color: aliceblue;
+    border-radius: 5px;
+    overflow: hidden;
+}
+form .content{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.textInput input{
+    border: none;
+    padding: 10px;
+    outline: none;
+    border: solid #183D3D;
+    border-radius: 5px;
+}
+.message {
+    display: grid;
+    gap: 10px;
+}
+.message input{
+    padding: 1rem;
+    border: solid 2px #183D3D;
+    border-radius: 10px;
+    outline: none;
+}
+.content {
+    color: #183D3D;
+}
+.message button{
+    padding: 15px;
+    border-radius: 7px;
+    border: none;
+    background-color: #183D3D;
+    color: aliceblue;
+}
+.message button:hover{
+background-color: #040D12;
+}
+.example{
+    padding: 10px;
+    background-color: #183D3D;
+    display: grid;
+    gap: 10px;
+    border-radius: 5px;
+}
+.example div{
+    padding: 10px;
+    display: flex;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    color: aliceblue;
+    width: 100%;
+}
+ div .phone{
+    display: grid;
+}
+.example div i{
+   color: #183D3D;
+    padding: 5px;
+    border-radius: 50%;
+    background-color: aliceblue;
+}
+@media (width <= 768px) {
+    .container{
+       display: grid;
+       place-items: center;
+    }
+    form{
+        width: 100%;
+    }
+    .example{
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2,200px);
+       
+    }
+}
+
+
+@media (width <= 443px) {
+    .container{
+       display: grid;
+       place-items: center;
+       margin-top: 60vh;
+      
+    }
+
+    form{
+        width: 100%;
+    }
+    .example{
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(1,250px);
+    }
+    form .textInput{
+        display: flex;
+        gap: 10px;
+      
+    }
+    form .textInput input{
+        width: 100%;
+        border: solid;
+        padding: 15px;
+        border-radius: 10px;
+    }
+   
+}
